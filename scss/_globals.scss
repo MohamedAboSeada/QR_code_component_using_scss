@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+// typography
+$main-font: 'Outfit', sans-serif;
+
+$fonts-weights: (
+	'Regular': 400,
+	'Bold': 700,
+);
+
+$font-sizes: (
+	small: 1.2rem,
+	medium: 1.7rem,
+	large: 2.2rem,
+);
+
+// colors
+$colors: (
+	White: hsl(0, 0%, 100%),
+	Light-gray: hsl(212, 45%, 89%),
+	Grayish-blue: hsl(220, 15%, 55%),
+	Dark-blue: hsl(218, 44%, 22%),
+);
+
+@function getColor($color) {
+	@return map-get($colors, $color);
+}
+
+@function fontSize($size) {
+	@return map-get($font-sizes, $size);
+}
+
+@function getWight($weight) {
+	@return map-get($fonts-weights, $weight);
+}
